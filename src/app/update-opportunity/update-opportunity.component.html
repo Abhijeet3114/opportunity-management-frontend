@@ -1,0 +1,45 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Edit Opportunity details</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Executive Director</label>
+      <input type="text" class="form-control" id="hiringmanager" pattern="[A-Za-z]+"
+             [(ngModel)]="opportunity.hiringManager" name="hiringmanager">
+    </div>
+    <div class="form-group">
+      <label>Job Role</label>
+      <input type="text" class="form-control" id="opportunityRole" pattern="[A-Za-z]+"
+             [(ngModel)]="opportunity.role" name="opportunityRole">
+    </div>
+    <div class="form-group">
+      <label>Skill Required</label>
+      <input type="text" class="form-control" id="skills"
+             [(ngModel)]="opportunity.skills" name="skills">
+    </div>
+    <div class="form-group">
+      <label>Experience Required</label>
+      <input type="number" min="0" class="form-control" id="experience"
+             [(ngModel)]="opportunity.experience" name="experience">
+    </div>
+    <div class="form-group">
+      <label>Joining Location</label>
+      <input type="text" class="form-control" id="joiningLocation" pattern="[A-Za-z]+"
+             [(ngModel)]="opportunity.joiningLocation" name="joiningLocation">
+    </div>
+    <div class="form-group">
+      <label>Closing Date</label>
+      <input type="date" class="form-control" id="joiningDate"
+             [ngModel]="opportunity.joiningDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.joiningDate = $event" name="joiningDate">
+    </div>
+    <div class="form-group">
+      <label>Date of Commencement</label>
+      <input type="date" class="form-control" id="publishDate"
+             [ngModel]="opportunity.publishDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.publishDate = $event" name="publishDate">
+    </div>
+    <div class="form-group">
+    <label>Description</label>
+    <textarea class="from-control"[(ngModel)]="opportunity.description" name="description" rows="3" cols="56"></textarea>
+    </div>
+<button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</div>

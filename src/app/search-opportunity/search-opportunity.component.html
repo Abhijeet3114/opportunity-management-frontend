@@ -1,0 +1,52 @@
+<label for="search">Search</label>
+<div class="container">
+    <input type="text" #searchInput class="form-control" size="50" placeholder="location/role/executive director/skills">
+    <button type="button" (click)="searchById(searchInput.value)" class="btn btn-primary">Search</button>
+ </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h2>Opportunities</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Executive Director</th>
+        <th>Job Location</th>
+        <th>Job Role</th>
+        <th>Required Skills</th>
+        <th>Experience</th>
+        <th>Commencement</th>
+        <th>Closing Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let opportunity of opportunities">
+        <td>{{opportunity.hiringManager}}</td>
+        <td>{{opportunity.joiningLocation}}</td>
+        <td>{{opportunity.role}}</td>
+        <td width="20%">{{opportunity.skills}}</td>
+        <td width="3%">{{opportunity.experience}}</td>
+        <td>{{opportunity.publishDate | date: 'dd-MM-yyyy'}}</td>
+        <td>{{opportunity.joiningDate | date: 'dd-MM-yyyy'}}</td>
+        <td>
+          <div>
+            <button (click)='updateOpportunity(opportunity.opportunityId)' class="btn btn-info btn-sm" style="margin-right :5px" title="Edit Opportunity">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+            <button (click)='deleteOpportunity(opportunity.opportunityId)' class="btn btn-danger btn-sm" style="margin-right :5px" title="Delete Opportunity">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+            <button (click)='viewOpportunity(opportunity.opportunityId)' class="btn btn-warning btn-sm" title="View Opportunity">
+              <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
