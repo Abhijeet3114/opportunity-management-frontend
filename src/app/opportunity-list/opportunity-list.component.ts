@@ -16,7 +16,7 @@ export class OpportunityListComponent implements OnInit {
     this.getOpportunities();
   }
 
-  private getOpportunities() {
+  getOpportunities() {
     this.opportunityService.getOpportunities().subscribe(data1 => {
       console.log(data1);
       this.opportunities = data1;

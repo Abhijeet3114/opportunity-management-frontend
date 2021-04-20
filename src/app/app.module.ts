@@ -11,6 +11,9 @@ import { SearchOpportunityComponent } from './search-opportunity/search-opportun
 import { ViewOpportunityComponent } from './view-opportunity/view-opportunity.component';
 import { SocialAuthServiceConfig } from 'angularx-social-login'
 import { SocialLoginModule, GoogleLoginProvider } from 'angularx-social-login'
+import { CommonModule } from '@angular/common';
+import { AuthGuard } from './Shared/Guard';
+import { SharedService } from './Services/shared.service';
 
 //const config = new SocialAuthServiceConfig([
   
@@ -28,7 +31,8 @@ import { SocialLoginModule, GoogleLoginProvider } from 'angularx-social-login'
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    CommonModule
   ],
   providers: [
     {
@@ -44,8 +48,10 @@ import { SocialLoginModule, GoogleLoginProvider } from 'angularx-social-login'
           }
         ]
       } as SocialAuthServiceConfig,
-    }
+    },
+    AuthGuard,
+    SharedService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

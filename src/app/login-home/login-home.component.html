@@ -1,1 +1,27 @@
-<p>login-home works!</p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card text-center">
+  <h6 class="card-header"> Accolite Opportunity Management Login</h6>
+  <div class="card-block">
+    <h4 class="card-title">Not Signed in!</h4>
+    <p class="card-text"> Sign in With </p>
+  </div>
+  <div class="card-block">
+    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+      <img width="20" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+    </button>
+  </div>
+</div>
+<!--
+<div *ngIf="user" class="card text-center">
+  <h6 class="card-header"> Accolite Opportunity Management Login</h6>
+  <div class="card-block"> </div>
+
+  <div class="card-block">
+    <button class="btn btn-social-icon btn-google mx-1" (click)="signOut()">
+      Sign Out
+    </button>
+  </div>
+</div>
+  -->
