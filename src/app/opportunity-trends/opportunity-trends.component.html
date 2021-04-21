@@ -1,0 +1,36 @@
+<h4> Opportunities Summary</h4>
+<br>
+<table>
+  <tr>
+    <td>
+      <div *ngIf="summarrydata && summarrydata.length" class="col-md-24">
+        <ngx-charts-bar-vertical-2d [view]="view"
+                                    [scheme]="colorScheme"
+                                    [results]="summarrydata"
+                                    [gradient]="gradient"
+                                    [xAxis]="showXAxis"
+                                    [yAxis]="showYAxis"
+                                    [legend]="showLegend"
+                                    [legendTitle]="'Domain'"
+                                    [showXAxisLabel]="showXAxisLabel"
+                                    [showYAxisLabel]="showYAxisLabel"
+                                    [xAxisLabel]="'Location:role'"
+                                    [yAxisLabel]="'No of Opportunities'">
+        </ngx-charts-bar-vertical-2d>
+      </div>
+    </td>
+  </tr>
+  <tr>
+  <td>
+    <br><br><br><br>
+    <h4>location based overview of opportunities</h4>
+    <div *ngIf="locationData && locationData.length" class="col-md-24">
+      <ngx-charts-advanced-pie-chart [results]="locationData"
+                                  [view]="view"
+                                  [scheme]="colorScheme"
+                                  [gradient]="gradient">
+      </ngx-charts-advanced-pie-chart>
+    </div>
+  </td>
+  </tr>
+</table>

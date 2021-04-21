@@ -15,6 +15,10 @@ export class OpportunityService {
     return this.httpClient.get<Opportunity[]>(`${this.base_url}`);
   }
 
+  getAllOpportunities(): Observable<Opportunity[]> {
+    return this.httpClient.get<Opportunity[]>(`${this.base_url}/all`);
+  }
+
   createOpportunity(opportunity: Opportunity): Observable<Object> {
     return this.httpClient.post(`${this.base_url}`, opportunity);
   }

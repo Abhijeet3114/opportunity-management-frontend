@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
+    "@swimlane/ngx-charts": "^17.0.1",
     "angularx-social-login": "^3.5.5",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",

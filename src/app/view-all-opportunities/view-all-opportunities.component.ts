@@ -4,20 +4,19 @@ import { Opportunity } from '../opportunity';
 import { OpportunityService } from '../opportunity.service';
 
 @Component({
-  selector: 'app-opportunity-list',
-  templateUrl: './opportunity-list.component.html',
-  styleUrls: ['./opportunity-list.component.css']
+  selector: 'app-view-all-opportunities',
+  templateUrl: './view-all-opportunities.component.html',
+  styleUrls: ['./view-all-opportunities.component.css']
 })
-export class OpportunityListComponent implements OnInit {
+export class ViewAllOpportunitiesComponent implements OnInit {
   opportunities: Opportunity[] = [];
   constructor(private opportunityService: OpportunityService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getOpportunities();
+    this.getAllOpportunities();
   }
-
-  getOpportunities() {
-    this.opportunityService.getOpportunities().subscribe(data1 => {
+  getAllOpportunities() {
+    this.opportunityService.getAllOpportunities().subscribe(data1 => {
       console.log(data1);
       this.opportunities = data1;
     }
@@ -31,11 +30,12 @@ export class OpportunityListComponent implements OnInit {
 
   deleteOpportunity(opportunityid: number) {
     this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
-      this.getOpportunities();
-      });
+      this.getAllOpportunities();
+    });
   }
   viewOpportunity(opportunityid: number) {
     console.log(opportunityid);
     this.router.navigate(['view', opportunityid]);
   }
+
 }

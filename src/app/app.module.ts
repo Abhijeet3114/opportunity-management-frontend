@@ -14,6 +14,10 @@ import { SocialLoginModule, GoogleLoginProvider } from 'angularx-social-login'
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './Shared/Guard';
 import { SharedService } from './Services/shared.service';
+import { OpportunityTrendsComponent } from './opportunity-trends/opportunity-trends.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewAllOpportunitiesComponent } from './view-all-opportunities/view-all-opportunities.component';
 
 //const config = new SocialAuthServiceConfig([
   
@@ -24,7 +28,9 @@ import { SharedService } from './Services/shared.service';
     CreateOpportunityComponent,
     UpdateOpportunityComponent,
     SearchOpportunityComponent,
-    ViewOpportunityComponent
+    ViewOpportunityComponent,
+    OpportunityTrendsComponent,
+    ViewAllOpportunitiesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { SharedService } from './Services/shared.service';
     HttpClientModule,
     FormsModule,
     SocialLoginModule,
-    CommonModule
+    CommonModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
