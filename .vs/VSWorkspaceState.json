@@ -3,9 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\create-opportunity",
     "\\src\\app\\opportunity-trends",
-    "\\src\\app\\view-all-opportunities"
+    "\\src\\app\\update-opportunity"
   ],
-  "SelectedNode": "\\src\\app\\opportunity-trends\\opportunity-trends.component.html",
+  "SelectedNode": "\\src\\app\\opportunity.service.spec.ts",
   "PreviewInSolutionExplorer": false
 }
