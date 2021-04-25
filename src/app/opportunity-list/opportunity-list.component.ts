@@ -30,9 +30,16 @@ export class OpportunityListComponent implements OnInit {
   }
 
   deleteOpportunity(opportunityid: number) {
-    this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
-      this.getOpportunities();
+    if (confirm('Are you sure you want to delete?')) {
+      this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
+        this.getOpportunities();
       });
+      console.log('Deleted from the database.');
+    } else {
+      // Do nothing!
+      console.log('Not deleted from the database.');
+    }
+    
   }
   viewOpportunity(opportunityid: number) {
     console.log(opportunityid);

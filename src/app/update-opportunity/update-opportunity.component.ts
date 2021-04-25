@@ -28,6 +28,19 @@ export class UpdateOpportunityComponent implements OnInit {
     }, error => console.log(error)
     );
   }
+
+  keyPressAlphaNumeric(event: any) {
+
+    var inp = String.fromCharCode(event.keyCode);
+
+    if (/[a-zA-Z]/.test(inp)) {
+      return true;
+    } else {
+      event.preventDefault();
+      return false;
+    }
+  }
+
   goToOpportunitiesList() {
     this.route.navigate(['/opportunities']);
   }

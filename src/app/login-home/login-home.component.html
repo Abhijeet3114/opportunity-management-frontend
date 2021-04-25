@@ -2,17 +2,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="card text-center">
-  <h6 class="card-header"> Accolite Opportunity Management Login</h6>
+  <h6 class="card-header"> Welcome to Accolite Opportunity Management</h6>
   <div class="card-block">
-    <h4 class="card-title">Not Signed in!</h4>
-    <p class="card-text"> Sign in With </p>
+    <h5 class="card-title">Not Signed in!</h5> 
   </div>
   <div class="card-block">
-    <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">
+    <button class="btn btn-outline-dark" (click)="signInWithGoogle()" style="margin-bottom : 5px">
+      Login with
       <img width="20" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
     </button>
   </div>
 </div>
+
+<!--<div class="row">
+  <div class="col-md-3">
+    <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none">
+      <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      Login with Google
+    </a>
+  </div>
+</div>-->
+
+<!-- Minified CSS and JS -->
+<!--<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+</script>-->
 <!--
 <div *ngIf="user" class="card text-center">
   <h6 class="card-header"> Accolite Opportunity Management Login</h6>

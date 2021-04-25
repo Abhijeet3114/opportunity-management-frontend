@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\view-opportunity"
+    "\\src\\app\\opportunity-trends",
+    "\\src\\app\\view-all-opportunities"
   ],
-  "SelectedNode": "\\src\\app\\view-opportunity\\view-opportunity.component.html",
+  "SelectedNode": "\\src\\app\\opportunity-trends\\opportunity-trends.component.html",
   "PreviewInSolutionExplorer": false
 }

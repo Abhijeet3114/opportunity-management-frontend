@@ -23,9 +23,16 @@ export class SearchOpportunityComponent implements OnInit {
   }
 
   deleteOpportunity(opportunityid: number) {
-    this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
-      this.searchById(this.searchString);
-    });
+    if (confirm('Are you sure you want to delete?')) {
+      this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
+        this.searchById(this.searchString);
+      });
+      console.log('Deleted from the database.');
+    }
+    else {
+     // Do nothing!
+      console.log('Not deleted from the database.');
+    }
   }
 
   searchById(role: string) {

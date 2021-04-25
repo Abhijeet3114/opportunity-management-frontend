@@ -1,20 +1,20 @@
 <div class="col-md-6 offset-md-3">
   <h3> Create Opportunity</h3>
-  <form (ngSubmit)="onSubmit()">
+  <form novalidate (ngSubmit)="onSubmit()" name="myform">
     <div class="form-group">
       <label>Executive Director</label>
       <input type="text" class="form-control" id="hiringmanager" pattern="[A-Za-z]+"
-             [(ngModel)]="opportunity.hiringManager" name="hiringmanager" placeholder="enter name of ED">
+             [(ngModel)]="opportunity.hiringManager" name="hiringmanager" placeholder="enter name of ED" (keypress)="keyPressAlphaNumeric($event)"/>
     </div>
     <div class="form-group">
       <label>Job Role</label>
       <input type="text" class="form-control" id="opportunityRole" pattern="[A-Za-z]+"
-             [(ngModel)]="opportunity.role" name="opportunityRole" placeholder="enter role">
+             [(ngModel)]="opportunity.role" name="opportunityRole" placeholder="enter role" (keypress)="keyPressAlphaNumeric($event)">
     </div>
     <div class="form-group">
       <label>Skill Required</label>
       <input type="text" class="form-control" id="skills"
-             [(ngModel)]="opportunity.skills" name="skills" placeholder="enter skills required for the role">
+             [(ngModel)]="opportunity.skills" name="skills" placeholder="enter skills required for the role" required>
     </div>
     <div class="form-group">
       <label>Experience Required</label>
@@ -23,18 +23,18 @@
     </div>
     <div class="form-group">
       <label>Joining Location</label>
-      <input type="text" class="form-control" id="joiningLocation" pattern="[A-Za-z]+"
-             [(ngModel)]="opportunity.joiningLocation" name="joiningLocation" placeholder="enter joining location">
+      <input type="text" class="form-control" id="joiningLocation"
+             [(ngModel)]="opportunity.joiningLocation" name="joiningLocation" placeholder="enter joining location" (keypress)="keyPressAlphaNumeric($event)">
     </div>
     <div class="form-group">
       <label>Closing Date</label>
       <input type="date" class="form-control" id="joiningDate"
-             [ngModel]="opportunity.joiningDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.joiningDate = $event" name="joiningDate">
+             [ngModel]="opportunity.joiningDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.joiningDate = $event" name="joiningDate" required>
     </div>
     <div class="form-group">
       <label>Date of Commencement</label>
       <input type="date" class="form-control" id="publishDate"
-             [ngModel]="opportunity.publishDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.publishDate = $event" name="publishDate">
+             [ngModel]="opportunity.publishDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.publishDate = $event" name="publishDate" required>
     </div>
     <div class="form-group">
       <label>Description</label>

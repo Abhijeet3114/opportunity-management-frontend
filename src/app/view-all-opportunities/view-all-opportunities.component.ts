@@ -29,10 +29,19 @@ export class ViewAllOpportunitiesComponent implements OnInit {
   }
 
   deleteOpportunity(opportunityid: number) {
-    this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
-      this.getAllOpportunities();
-    });
+    if (confirm('Are you sure you want to delete?')) {
+      this.opportunityService.deleteOpportunity(opportunityid).subscribe(data => {
+        this.getAllOpportunities();
+      });
+      console.log("Succesfully Deleted from DB")
+    }
+    else {
+      console.log("Not Deleted from DB")
+    }
   }
+
+
+
   viewOpportunity(opportunityid: number) {
     console.log(opportunityid);
     this.router.navigate(['view', opportunityid]);
