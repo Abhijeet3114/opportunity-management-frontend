@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { GoogleLoginProvider, SocialAuthService, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
@@ -9,6 +10,8 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule, SocialLoginModule
       ],
+      schemas: [NO_ERRORS_SCHEMA]
+      ,
       declarations: [
         AppComponent
       ],
