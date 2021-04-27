@@ -1,16 +1,32 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { GoogleLoginProvider, SocialAuthService, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule, SocialLoginModule
       ],
       declarations: [
         AppComponent
       ],
+      providers: [
+        {
+          provide: 'SocialAuthServiceConfig',
+          useValue: {
+            autoLogin: false,
+            providers: [
+              {
+                id: GoogleLoginProvider.PROVIDER_ID,
+                provider: new GoogleLoginProvider(
+                  '604014241218-os1ne12jcdmupgqospkes04ikjurq0fj.apps.googleusercontent.com'
+                )
+              }
+            ]
+          } as SocialAuthServiceConfig,
+        }],
     }).compileComponents();
   });
 
@@ -26,10 +42,17 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('opportunity-management-frontend');
   });
 
+  it('should render navbar tabs', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('ul').textContent).toContain('Check OpportunitiesAdd OpportunitiesSearch OpportunitiesSummaryAll OpportunitiesSignout');
+  });
+
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('opportunity-management-frontend app is running!');
+    expect(compiled.querySelector('div').textContent).toContain('Accolite Opportunity Management Portal');
   });
 });
