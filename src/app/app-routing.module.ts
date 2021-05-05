@@ -13,7 +13,7 @@ import { ViewOpportunityComponent } from './view-opportunity/view-opportunity.co
 const routes: Routes = [
   { path: "opportunities", component: OpportunityListComponent, canActivate: [AuthGuard] },
   { path: "add-opportunities", component: CreateOpportunityComponent, canActivate: [AuthGuard]},
-  { path: "", redirectTo: "opportunities", pathMatch: 'full' },
+  { path: "", redirectTo: "search", pathMatch: 'full' },
   { path: "update/:opportunityid", component: UpdateOpportunityComponent, canActivate: [AuthGuard] },
   { path: "search", component: SearchOpportunityComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginHomeComponent },
