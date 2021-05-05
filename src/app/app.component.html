@@ -2,30 +2,37 @@
  <!--<span> <img src="/assets/accolite_logo_grey.jpg" width="300" height="100" style="margin-right : 100px"></span>-->
  <!--<span class="text-center" style="font-size:35px">accolite opportunity management portal</span>
 </div>-->
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <span class="nav-item"> <img src="/assets/download.jpg" width="70" height="70" style="margin-right : 100px"></span>
+<style>
+  .navbar-custom {
+    background-color: #0E1C3A;
+  }
+
+  .navbar-item {
+    font-size:small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 70px;
+  }
+</style>
+<nav class="navbar navbar-expand-sm navbar-custom navbar-dark" style="column-rule-color:midnightblue">
+  <a routerLink="search" routerLinkActive="active"class="nav-link"> <img src="\assets\logo.png" width="280" height="60" style="margin-right : 50px"></a>
   <ul class="navbar-nav">
-    <li class="nav-item" style="margin-right: 10px">
-      <b>
-        <a routerLink="opportunities" routerLinkActive="active" class="nav-link">Check Opportunities</a>
-      </b>
+    <li class="nav-item">
+        <a routerLink="opportunities" routerLinkActive="active" class="nav-link navbar-item">CHECK</a>
     </li>
-    <li class="nav-item" style="margin-right: 10px">
-      <b><a routerLink="add-opportunities" routerLinkActive="active" class="nav-link">Add Opportunities</a></b>
+    <li class="nav-item">
+      <a routerLink="add-opportunities" routerLinkActive="active" class="nav-link navbar-item">CREATE</a>
     </li>
-    <li class="nav-item" style="margin-right: 10px">
-      <b><a routerLink="search" routerLinkActive="active" class="nav-link">Search Opportunities</a></b>
+    <li class="nav-item">
+      <a routerLink="search" routerLinkActive="active" class="nav-link navbar-item">SEARCH</a>
     </li>
-    <li class="nav-item" style="margin-right: 10px">
-      <b><a routerLink="summary" routerLinkActive="active" class="nav-link">Summary</a></b>
+    <li class="nav-item">
+      <a routerLink="summary" routerLinkActive="active" class="nav-link navbar-item">SUMMARY</a>
     </li>
-    <li class="nav-item" style="margin-right: 10px">
-      <b>
-        <a routerLink="allopportunities" routerLinkActive="active" class="nav-link">All Opportunities</a>
-      </b>
+    <li class="nav-item">
+        <a routerLink="allopportunities" routerLinkActive="active" class="nav-link navbar-item">VIEW_ALL</a>
     </li>
-    <li class="nav-item" style="margin-right: 10px">
-      <b><a (click)="signOut()" routerLinkActive="active" class="nav-link">Signout</a></b>
+    <li class="nav-item">
+      <a (click)="signOut()" routerLinkActive="active" class="nav-link navbar-item">SIGNOUT</a>
     </li>
   </ul>
 </nav>
