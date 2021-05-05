@@ -2,10 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\create-opportunity",
-    "\\src\\app\\opportunity-trends",
-    "\\src\\app\\update-opportunity"
+    "\\src\\app"
   ],
   "SelectedNode": "\\src\\app\\opportunity.service.spec.ts",
   "PreviewInSolutionExplorer": false

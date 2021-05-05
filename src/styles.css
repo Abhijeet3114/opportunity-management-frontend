@@ -2,14 +2,14 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .footer {
-  position:relative;
+  position: relative;
   bottom: auto;
-  width:100%;
-  margin-top:100px;
+  width: 100%;
+  margin-top: 100px;
   height: 30px;
-  background-color:dodgerblue;
+  background-color: #0E1C3A;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size:xx-small;
-  color:white;
+  font-size: xx-small;
+  color: white;
 }
