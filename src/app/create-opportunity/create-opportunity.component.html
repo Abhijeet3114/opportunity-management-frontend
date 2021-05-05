@@ -29,13 +29,13 @@
     <div class="form-group">
       <label>Closing Date</label>
       <input type="date" class="form-control" id="joiningDate"
-             [ngModel]="opportunity.joiningDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.joiningDate = $event" name="joiningDate" required>
+             [ngModel]="opportunity.joiningDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.joiningDate = $event" min="{{date | date:'yyyy-MM-dd'}}" name="joiningDate" required>
     </div>
-    <div class="form-group">
+    <!--<div class="form-group">
       <label>Date of Commencement</label>
       <input type="date" class="form-control" id="publishDate"
-             [ngModel]="opportunity.publishDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.publishDate = $event" name="publishDate" required>
-    </div>
+             [ngModel]="opportunity.publishDate | date:'yyyy-MM-dd'" (ngModelChange)="opportunity.publishDate = $event" name="publishDate" min="{{date | date:'yyyy-MM-dd'}}" required>
+    </div>-->
     <div class="form-group">
       <label>Description</label>
       <textarea class="form-control" name="message" [(ngModel)]="opportunity.description" rows="3" cols="56"></textarea>

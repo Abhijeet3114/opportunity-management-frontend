@@ -12,10 +12,13 @@ import { OpportunityService } from '../opportunity.service';
 export class CreateOpportunityComponent implements OnInit {
 
   opportunity: Opportunity = new Opportunity();
+  date: Date = new Date();
   constructor(private opportunityService: OpportunityService, private router: Router) {
   }
-
+ 
   ngOnInit(): void {
+    this.date = new Date();
+    //this.date.setMonth(this.date.getMonth() + 1);
   }
 
   saveOppotunity() {
@@ -27,10 +30,9 @@ export class CreateOpportunityComponent implements OnInit {
   }
 
   keyPressAlphaNumeric(event : any) {
-
     var inp = String.fromCharCode(event.keyCode);
 
-    if (/[a-zA-Z]/.test(inp)) {
+    if (/[a-zA-Z ]/.test(inp)) {
       return true;
     } else {
       event.preventDefault();
@@ -45,5 +47,4 @@ export class CreateOpportunityComponent implements OnInit {
     console.log(this.opportunity);
     this.saveOppotunity();
   }
-
 }
