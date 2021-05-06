@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Audit } from './Audit';
 import { Opportunity } from './opportunity';
 
 @Injectable({
@@ -10,6 +11,10 @@ export class OpportunityService {
 
   private base_url = 'http://localhost:8080/api/v1/opportunities';
   constructor(private httpClient: HttpClient) { }
+
+  getAudit(): Observable<Audit[]> {
+    return this.httpClient.get<Audit[]>(`${this.base_url}/audit/all`);
+  }
 
   getOpportunities(): Observable<Opportunity[]> {
     return this.httpClient.get<Opportunity[]>(`${this.base_url}`);
