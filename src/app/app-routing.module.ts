@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuditOpportunityComponent } from './audit-opportunity/audit-opportunity.component';
 import { CreateOpportunityComponent } from './create-opportunity/create-opportunity.component';
 import { LoginHomeComponent } from './login-home/login-home.component';
 import { OpportunityListComponent } from './opportunity-list/opportunity-list.component';
@@ -12,6 +13,7 @@ import { ViewOpportunityComponent } from './view-opportunity/view-opportunity.co
 
 const routes: Routes = [
   { path: "opportunities", component: OpportunityListComponent, canActivate: [AuthGuard] },
+  { path: "audit", component: AuditOpportunityComponent, canActivate: [AuthGuard] },
   { path: "add-opportunities", component: CreateOpportunityComponent, canActivate: [AuthGuard]},
   { path: "", redirectTo: "search", pathMatch: 'full' },
   { path: "update/:opportunityid", component: UpdateOpportunityComponent, canActivate: [AuthGuard] },
