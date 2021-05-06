@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\login-home"
   ],
-  "SelectedNode": "\\src\\app\\opportunity.service.spec.ts",
+  "SelectedNode": "\\src\\app\\login-home\\login-home.component.html",
   "PreviewInSolutionExplorer": false
 }

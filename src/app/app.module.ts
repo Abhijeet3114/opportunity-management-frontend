@@ -18,6 +18,7 @@ import { OpportunityTrendsComponent } from './opportunity-trends/opportunity-tre
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewAllOpportunitiesComponent } from './view-all-opportunities/view-all-opportunities.component';
+import { AuditOpportunityComponent } from './audit-opportunity/audit-opportunity.component';
 
 //const config = new SocialAuthServiceConfig([
   
@@ -30,7 +31,8 @@ import { ViewAllOpportunitiesComponent } from './view-all-opportunities/view-all
     SearchOpportunityComponent,
     ViewOpportunityComponent,
     OpportunityTrendsComponent,
-    ViewAllOpportunitiesComponent
+    ViewAllOpportunitiesComponent,
+    AuditOpportunityComponent
   ],
   imports: [
     BrowserModule,

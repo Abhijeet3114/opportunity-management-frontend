@@ -49,7 +49,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('ul').textContent).toContain('Check OpportunitiesAdd OpportunitiesSearch OpportunitiesSummaryAll OpportunitiesSignout');
+    expect(compiled.querySelector('ul').textContent).toContain('CHECKCREATESEARCHSUMMARYVIEW_ALLAUDITSIGNOUT');
   });
 
   it('should render title', () => {

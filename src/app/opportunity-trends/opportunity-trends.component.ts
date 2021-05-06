@@ -121,7 +121,7 @@ export class OpportunityTrendsComponent implements OnInit {
       this.locationData.push(tmp);
     }
     obj.clear();
-    //console.log("Final location",this.locationData);
+    console.log("Final location",this.locationData);
   }
 
   view: any = [1200, 500];

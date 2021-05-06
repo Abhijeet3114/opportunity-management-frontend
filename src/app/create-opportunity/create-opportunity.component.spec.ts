@@ -6,18 +6,18 @@ import { of } from 'rxjs';
 import { OpportunityService } from '../opportunity.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
+import { SocialLoginModule } from 'angularx-social-login';
 
 describe('CreateOpportunityComponent', () => {
   let component: CreateOpportunityComponent;
   let fixture: ComponentFixture<CreateOpportunityComponent>;
   let httpClient: HttpClient;
   let service: OpportunityService;
-  let location: Location;
   let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, AppRoutingModule, RouterTestingModule],
+      imports: [HttpClientModule, AppRoutingModule, RouterTestingModule, SocialLoginModule],
       declarations: [CreateOpportunityComponent]
 
     })
@@ -28,7 +28,6 @@ describe('CreateOpportunityComponent', () => {
     fixture = TestBed.createComponent(CreateOpportunityComponent);
     httpClient = TestBed.get(HttpClient);
     service = TestBed.inject(OpportunityService);
-    location = TestBed.get(Location);
     router = TestBed.get(Router);
     component = fixture.componentInstance;
     fixture.detectChanges();
